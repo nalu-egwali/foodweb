@@ -4,4 +4,4 @@ from . import urls
 
 # Create your views here.
 def index (request):
-    return HttpResponse("This the food web app")
+    return render(request, 'home.html', {})

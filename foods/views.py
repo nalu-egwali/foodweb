@@ -1,11 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
+from .models import Food
 from . import urls
 
 # Create your views here.
 def index (request):
-    return render(request, 'home.html', {})
+    foods = Food.objects.all()
+    return render(request, 'home.html', {'foods': foods,})
+
+def get_details (request, food_id):
+    food = get_object_or_404(Food, pk = food_id)
+
+    return render(request, 'details.html', {
+        'food': food
+    })
 
 def login_user (request):
     if request.method == 'POST':

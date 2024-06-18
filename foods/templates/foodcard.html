@@ -1,12 +1,11 @@
 
 
-<a href="#" class="btn btn-primary">
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+<a href="{% url 'food:details' food.id %}" class="btn btn-primary">
+  <div class="card justify-content-between" style="width: 18rem; height: 18rem;">
+    <img src="{{ food.image.url }}" class="card-img-top h-75" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{ 'food.name'}}</h5>
-      <h4 class="card-title">{{ 'food.type'}}</h6>
-      <p class="card-text">{{ food.description }}</p>
+      <h5 class="card-title">{{ food.name }}</h5>
+      <h4 class="card-title">{{ food.price }}</h6>
     </div>
   </div>
 </a>

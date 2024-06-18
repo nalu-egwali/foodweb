@@ -2,9 +2,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <div>
+   <div class="container">
       <h2>Foods on the menu today</h2>
-      {% include 'foodcard.html' %}
+      <div class="d-flex row-gap-3 column-gap-4 rounded-5 flex-wrap">
+         {% for food in foods %}
+            {% include 'foodcard.html' %}
+         {% endfor %}
+     </div>
    </div>
    <H1 class="container">Welcome</H1>
 {% endblock %}

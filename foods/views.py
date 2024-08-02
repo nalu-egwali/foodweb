@@ -2,7 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from .models import Food
+from .forms import SignUpForm
 from . import urls
+
 
 # Create your views here.
 def index (request):
@@ -17,3 +19,7 @@ def get_details (request, food_id):
         'food': food,
         'related_foods': related_foods
     })
+
+def signup (request):
+    form = SignUpForm()
+    return render (request, 'signup.html', {'form': form})

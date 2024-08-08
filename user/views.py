@@ -6,7 +6,6 @@ from .forms import SignUpForm
 
 # Create your views here.
 
-
 def login_user (request):
     if request.method == 'POST':
         return HttpResponse("You are logged in")

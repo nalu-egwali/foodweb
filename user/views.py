@@ -3,12 +3,21 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from .forms import SignUpForm
+from django.contrib import messages
 
 # Create your views here.
 
 def login_user (request):
     if request.method == 'POST':
-        return HttpResponse("You are logged in")
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username = username, password = password)
+        if user is not None:
+            login(request, user)
+            messages.success("Logged in successfully")
+            return redirect('home')
+        else:
+            return HttpResponse("Login Error")
     return render(request, 'loginform.html', {})
 
 def logout_user (request):

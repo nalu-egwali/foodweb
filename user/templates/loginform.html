@@ -9,7 +9,7 @@
   <form class="" method="POST" action="{% url 'user:login' %}">
     {% csrf_token %}
     <div class="mb-3 bg-gradient">
-      <input type="email" class="form-control" placeholder="username" name="username" required>
+      <input type="text" class="form-control" placeholder="username" name="username" required>
     </div>
     <br>
     <div class="mb-3">

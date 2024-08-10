@@ -14,8 +14,8 @@ def login_user (request):
         user = authenticate(request, username = username, password = password)
         if user is not None:
             login(request, user)
-            messages.success("Logged in successfully")
-            return redirect('home')
+            messages.success(request, "Logged in successfully")
+            return redirect('/')
         else:
             return HttpResponse("Login Error")
     return render(request, 'loginform.html', {})

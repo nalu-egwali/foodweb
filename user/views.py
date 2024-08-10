@@ -22,7 +22,7 @@ def login_user (request):
 
 def logout_user (request):
     logout(request)
-    return HttpResponse ("You are loggod out")
+    return redirect('/')
 
 def signup (request):
     if request.method == 'POST':

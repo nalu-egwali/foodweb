@@ -31,7 +31,7 @@ def signup (request):
             form.save()
             return redirect('/user/login/')
         else:
-            return HttpResponse('There was an error in your input')
+            return render (request, 'signup.html', {'form': form})
     else:    
         form = SignUpForm()
         return render (request, 'signup.html', {'form': form})

@@ -1,45 +1,30 @@
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Foodweb</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'food:index' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Dash board</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+<nav class="px-6 py-3 flex justify-between bg-gray-200">
+
+      <div class="" >
+        <a class="text-3xl font-bold pr-8" href="#">Foodweb</a>
+        <a class="text-xl font-medium px-4" aria-current="page" href="{% url 'food:index' %}">Home</a>
+        <a class="text-xl font-medium px-4" href="#">Profile</a>
+        <a class="text-xl font-medium px-4" href="#">Dash board</a>
       </div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
 
+      <form class="" role="search">
+        <input class="rounded-xl p-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="" type="submit">Search</button>
+      </form>
+
+      <div class=" ">
+    
         {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'user:logout' %}">Logout</a>
-          </li>
-
+          <a class="p-2 text-lg font-medium  rounded-xl"> Welcom! {{ user.username }}</a>
+          <a class="p-2 text-lg font-medium bg-teal-100 rounded-xl " href="{% url 'user:logout' %}">Logout</a>
+    
         {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'user:signup'%}">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'user:login' %}">Login</a>
-          </li>
-
+          <a class="p-2 text-lg font-medium bg-indigo-200 rounded-xl" href="{% url 'user:signup'%}">Sign Up</a>
+          <a class="p-2 text-lg font-medium bg-indigo-200 rounded-xl" href="{% url 'user:login' %}">Login</a>
+    
         {% endif %}
-
-        
-    </ul>
-    </div>
-  </nav>
+    
+    
+      </div>
+    </nav>

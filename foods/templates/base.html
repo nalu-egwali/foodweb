@@ -1,11 +1,12 @@
 
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Food Web</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet">
   </head>
   <body class="">
 
@@ -16,6 +17,6 @@
     {% endblock %}
 
     {% include 'footer.html' %}
-    
+
   </body>
 </html>

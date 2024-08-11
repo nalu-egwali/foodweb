@@ -1,0 +1,21 @@
+{
+  "name": "foodweb",
+  "version": "1.0.0",
+  "description": "8th June, 2024",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./static/src/input.css -o ./static/src/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalu-egwali/foodweb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nalu-egwali/foodweb/issues"
+  },
+  "homepage": "https://github.com/nalu-egwali/foodweb#readme"
+}

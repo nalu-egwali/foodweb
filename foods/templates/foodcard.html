@@ -1,13 +1,15 @@
 
 
-<a href="{% url 'food:details' food.id %}" class="btn btn-primary">
-  <div class="card justify-content-between" style="width: 18rem; height: 18rem;">
+<a href="{% url 'food:details' food.id %}" class="">
+  <div class=" col-span-1 grid justify-items-center border-2 ">
     {% if food.image.url %}
-        <img src="{{ food.image.url }}" class="card-img-top h-75" alt="...">
+      <div class="m-6  justify-self-center ">
+        <img src="{{ food.image.url }}" class="h-48 w-full max-w-fit object-cover" alt="...">
+      </div>
     {% endif %}
-    <div class="card-body">
-      <h5 class="card-title">{{ food.name }}</h5>
-      <h4 class="card-title">{{ food.price }}</h6>
-    </div>
+      <div class="">
+        <h5 class="font-semibold text-center">{{ food.name }}</h5>
+        <h4 class="font-medium text-center">{{ food.price }}</h6>
+      </div>
   </div>
 </a>

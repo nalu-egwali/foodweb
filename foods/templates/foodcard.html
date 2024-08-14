@@ -1,10 +1,10 @@
 
 
 <a href="{% url 'food:details' food.id %}" class="">
-  <div class=" col-span-1 grid justify-items-center border-2 ">
+  <div class=" col-span-1 grid justify-items-center  ">
     {% if food.image.url %}
       <div class="m-6  justify-self-center ">
-        <img src="{{ food.image.url }}" class="h-48 w-full max-w-fit object-cover" alt="...">
+        <img src="{{ food.image.url }}" class="h-48 rounded-2xl w-full max-w-fit object-cover" alt="...">
       </div>
     {% endif %}
       <div class="">

@@ -5,7 +5,8 @@
         <a class="text-3xl font-bold pr-8" href="#">Foodweb</a>
         <a class="text-xl font-medium px-4" aria-current="page" href="{% url 'food:index' %}">Home</a>
         <a class="text-xl font-medium px-4" href="#">Profile</a>
-        <a class="text-xl font-medium px-4" href="#">Dash board</a>
+        <a class="text-xl font-medium px-4" href="#">Dashboard</a>
+        <a class="text-xl font-medium px-4" href="{% url 'food:new_food' %}">New Item</a>
       </div>
 
       <form class="" role="search">
@@ -16,7 +17,7 @@
       <div class=" ">
     
         {% if user.is_authenticated %}
-          <a class="p-2 text-lg font-medium  rounded-xl"> Welcom! {{ user.username }}</a>
+          <a class="p-2 text-lg font-medium  rounded-xl"> Welcome! {{ user.username }}</a>
           <a class="p-2 text-lg font-medium bg-teal-100 rounded-xl " href="{% url 'user:logout' %}">Logout</a>
     
         {% else %}

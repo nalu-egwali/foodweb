@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+  <h1 class="mb-6 text-3xl "> {{ title }}</h1>
+  <form method="post" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div>
+        {{ form.as_p }}
+    </div>
+
+    {% include 'formerrors.html' %}
+
+    <button class="py-2 px-4 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Submit</button>
+
+  </form>
+
+{% endblock %}

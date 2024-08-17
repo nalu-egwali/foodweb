@@ -2,13 +2,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <div class="container">
-      <h2>Foods on the menu today</h2>
-      <div class="d-flex row-gap-3 column-gap-4 rounded-5 flex-wrap">
+   <div class="container mx-auto p-6">
+      <h2 class="text-2xl font-bold pb-6">Foods on the menu today</h2>
+      <div class="grid grid-cols-4  gap-3  items-center">
+
          {% for food in foods %}
             {% include 'foodcard.html' %}
          {% endfor %}
+
      </div>
    </div>
-   <H1 class="container">Welcome</H1>
 {% endblock %}

@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .forms import NewFoodForm
-from .models import Food
+from .models import Food, Category
 from . import urls
 
 
@@ -36,4 +36,6 @@ def new_food (request):
     
     # Else just show the user a form to fill
     form = NewFoodForm()
-    return render(request, 'newfood.html', {'form': form})
+    categories = Category.objects.all()
+    title = 'Add new food'
+    return render(request, 'newfood.html', {'form': form, 'title': title, 'categories': categories})

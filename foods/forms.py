@@ -22,8 +22,8 @@ class NewFoodForm (forms.ModelForm):
 
     image = forms.FileInput()
 
-    price = forms.CharField(widget=forms.TextInput(attrs={
-        'placeholder': 'Enter a Username',
+    price = forms.CharField(widget=forms.NumberInput(attrs={
+        'placeholder': 'Enter food price',
         'class': 'w-full py-2 px-3 rounded-xl'
     }))
 

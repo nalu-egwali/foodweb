@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'foods',
     'user',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'foodweb.urls'
+
+LOGIN_URL = '/user/login/'
+LOGIN_REDIRECT_URL = LOGIN_URL
 
 TEMPLATES = [
     {

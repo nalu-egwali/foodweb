@@ -24,4 +24,8 @@ The following Programming languages and tools are used in the project.
 ... _No references to external resources_
 
 ### Project State
-... _still in progress_
+* Home Page ... Done
+* User Signup page ... Done
+* User Login Page ... Done
+* Add new food Page ... Done
+* Dashboard Page ... Done

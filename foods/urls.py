@@ -7,6 +7,7 @@ app_name = 'food'
 urlpatterns = [
     path("", views.index, name='index'),
     path('<int:food_id>/', views.get_details, name='details' ),
+    path('<int:food_id>/edit/', views.edit_food, name='edit_food' ),
     path('newfood/', views.new_food, name='new_food'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

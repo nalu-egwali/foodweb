@@ -13,7 +13,7 @@ def index (request):
 
 def get_details (request, food_id):
     food = get_object_or_404(Food, pk = food_id)
-    related_foods = Food.objects.filter(category = food.category, is_sold = False).exclude(pk = food.id)[0:4]
+    related_foods = Food.objects.filter(category = food.category, is_available = True).exclude(pk = food.id)[0:4]
 
     return render(request, 'details.html', {
         'food': food,

@@ -22,7 +22,7 @@ class Food(models.Model):
     description = models.TextField(blank=True, null=True)
     price = models.FloatField()
     image = models.ImageField(upload_to="food_images", blank=True, null=True)
-    is_sold = models.BooleanField(default=False)
+    is_available = models.BooleanField(default=True)
     created_by = models.ForeignKey(User, related_name="foods", on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 

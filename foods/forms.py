@@ -52,4 +52,4 @@ class EditFoodForm(forms.ModelForm):
 
     class Meta:
         model= Food
-        fields= ('category', 'name', 'description', 'image', 'price', 'is_sold')
+        fields= ('category', 'name', 'description', 'image', 'price')
